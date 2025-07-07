@@ -1,0 +1,12 @@
+[project]
+name = "projeto-a2a"
+version = "0.1.0"
+description = "Aqui vamos a aprender como AGENTES de diferentes empresas podem se cominucar através do A2A"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+]
