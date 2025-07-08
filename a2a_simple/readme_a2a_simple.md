@@ -41,6 +41,19 @@ uv run --active test_client.py
 
 Você verá o cliente interagir com o agente no terminal.
 
+
+
+Exemplo de saída:
+
+![](./A2A_simple.png)
+
+
+
+
+
+
+
+
 ## <font color="red">Referências</font>
 
 - [a2a-python](https://github.com/a2aproject/a2a-python)
