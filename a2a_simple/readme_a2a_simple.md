@@ -27,6 +27,10 @@ Abra um terminal e execute o servidor (``server``) com o agente dummy:
 
 ```bash
 uv run .
+
+ou
+
+uv run __main__.py
 ```
 
 O agente será executado em ``http://localhost:9999``.
@@ -37,6 +41,10 @@ Abra um novo terminal e execute o cliente (``test_client``):
 
 ```bash
 uv run --active test_client.py
+
+ou 
+
+uv run test_client.py
 ```
 
 Você verá o cliente interagir com o agente no terminal.
