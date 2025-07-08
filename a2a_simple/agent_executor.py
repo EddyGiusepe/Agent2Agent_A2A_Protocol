@@ -1,3 +1,11 @@
+#! /usr/bin/env python3
+"""
+Senior Data Scientist.: Dr. Eddy Giusepe Chirinos Isidro
+
+Script agent_executor.py
+========================
+
+"""
 from a2a.server.agent_execution import AgentExecutor
 from a2a.server.agent_execution.context import RequestContext
 from a2a.server.events.event_queue import EventQueue
@@ -6,10 +14,10 @@ from pydantic import BaseModel
 
 
 class GreetingAgent(BaseModel):
-    """Greeting agent that returns a greeting"""
+    """Agnet de Saudação que retorna uma saudação"""
 
     async def invoke(self) -> str:
-        return "Hello YouTube! Make sure to like and subscribe!"
+        return "Olá Estudante! Certifique-se de curtir o vídeo e se inscrever!"
 
 
 class GreetingAgentExecutor(AgentExecutor):
@@ -19,8 +27,8 @@ class GreetingAgentExecutor(AgentExecutor):
 
     async def execute(self, context: RequestContext, event_queue: EventQueue):
         result = await self.agent.invoke()
-        event_queue.enqueue_event(new_agent_text_message(result))
+        await event_queue.enqueue_event(new_agent_text_message(result))
 
     async def cancel(self, context: RequestContext, event_queue: EventQueue):
-        raise Exception("Cancel not supported")
+        raise Exception("Cancelamento não suportado")
     
